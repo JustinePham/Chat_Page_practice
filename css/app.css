@@ -1,0 +1,507 @@
+.page-sidebar {
+  width: 75px;
+  background-color: #05b6e4;
+  z-index: 1000;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: auto;
+  height: 100%;
+  overflow-y: hidden;
+  position: fixed; }
+  .page-sidebar .sidebar-header {
+    background-color: #07acd8;
+    top: 0;
+    height: 75;
+    padding: 20px; }
+    .page-sidebar .sidebar-header span i {
+      color: white; }
+  .page-sidebar .sidebar-menu {
+    text-align: right; }
+    .page-sidebar .sidebar-menu ul {
+      width: 100%;
+      padding-left: 0;
+      list-style: none; }
+      .page-sidebar .sidebar-menu ul li {
+        width: 100%;
+        text-align: right;
+        height: 60px;
+        padding: 15px; }
+        .page-sidebar .sidebar-menu ul li div {
+          font-size: 30px;
+          width: 45px;
+          height: 45px;
+          padding: 7px;
+          background-color: darkgray; }
+          .page-sidebar .sidebar-menu ul li div a {
+            color: white;
+            text-decoration: none; }
+
+.site-header {
+  background-color: white;
+  height: 75;
+  z-index: 999;
+  width: 100%;
+  /* replace later with mixin */
+  border-bottom: 1.8px solid rgba(153, 153, 153, 0.2); }
+  .site-header .header-actions-bar {
+    font-weight: 300;
+    color: lightgrey;
+    margin-left: 20; }
+    .site-header .header-actions-bar .profile-img {
+      width: 70px;
+      padding: 0 10 0 10;
+      margin-top: 20; }
+    .site-header .header-actions-bar .header-username {
+      line-height: 5; }
+      .site-header .header-actions-bar .header-username p {
+        font-size: 16;
+        font-weight: 200;
+        color: black;
+        height: 75;
+        margin: 0; }
+    .site-header .header-actions-bar ul {
+      font-size: 38;
+      font-weight: 300;
+      display: inline;
+      height: 75;
+      margin: 0;
+      padding: 15px; }
+      .site-header .header-actions-bar ul li {
+        display: inline-block;
+        margin: 0 10 0 10; }
+        .site-header .header-actions-bar ul li .header-messages-wrapper .icon-messages {
+          border-right: 1px solid darkgrey; }
+
+.header-social {
+  float: right;
+  height: 75; }
+  .header-social ul {
+    display: inline;
+    font-size: 30;
+    text-align: right;
+    margin: 0 15 0 15;
+    line-height: 3;
+    float: right;
+    list-style: none;
+    height: 75; }
+    .header-social ul li {
+      display: inline-block; }
+      .header-social ul li .social-media-icon {
+        color: white;
+        border-radius: 5px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 5;
+        background-color: #07acd8; }
+        .header-social ul li .social-media-icon i:before {
+          line-height: 1.18; }
+        .header-social ul li .social-media-icon:hover {
+          background-color: #05b6e4; }
+
+.header-search {
+  width: 60%;
+  display: inline;
+  display: inline-block;
+  margin-left: 10;
+  line-height: 3; }
+  .header-search a {
+    color: #07acd8; }
+    .header-search a:hover {
+      text-decoration: none;
+      color: #05b6e4; }
+  .header-search input {
+    font-size: 18;
+    border: 0;
+    text-align: right; }
+    .header-search input:focus {
+      outline: none; }
+
+.header {
+  padding-bottom: 0;
+  height: 75; }
+
+.header-left {
+  width: 30%;
+  float: left;
+  height: 75; }
+
+.header-right {
+  width: 55%;
+  float: right;
+  font-size: 25px;
+  line-height: 2.5;
+  height: 75;
+  margin: 0; }
+
+.header-profileimg-wrapper {
+  background-color: #07acd8;
+  font-size: 30;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  padding: 4; }
+
+.homepage-slider {
+  margin-top: 0;
+  padding-top: 0;
+  min-height: 300px; }
+
+.homepage-campaign-bar {
+  height: 70;
+  border-bottom: 1px solid darkgray;
+  border-top: 1px solid darkgray;
+  font-weight: 100;
+  font-size: 20;
+  font-family: Montserrat, sans-serif;
+  padding: 20; }
+  .homepage-campaign-bar ul {
+    display: inline-block; }
+  .homepage-campaign-bar .bar-content label {
+    margin-right: 25; }
+
+.homepage-campaigns {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 10px 5px 0 5px; }
+
+.homepage-slider .carousel-inner .item {
+  background-color: gainsboro;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px; }
+
+.homepage-campaigns .campaign-card-wrapper {
+  /*  -webkit-flex: 1;  /* Safari 6.1+ */
+  /* -ms-flex: 1;  /* IE 10 */
+  /* flex: 1; */
+  margin: 0 5px 10px 5px;
+  width: calc((100% / 4) - 10px);
+  background-color: white;
+  display: flex; }
+  @media (min-width: 992px) and (max-width: 1280px) {
+    .homepage-campaigns .campaign-card-wrapper {
+      margin: 0 5px 10px 5px;
+      width: calc((100% / 3) - 10px);
+      background-color: white;
+      display: flex; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .homepage-campaigns .campaign-card-wrapper {
+      margin: 0 5px 10px 5px;
+      width: calc((100% / 2) - 10px);
+      background-color: white;
+      display: flex; } }
+  @media (min-width: 376px) and (max-width: 767px) {
+    .homepage-campaigns .campaign-card-wrapper {
+      margin: 0 5px 10px 5px;
+      width: calc(100% - 10px);
+      background-color: white;
+      display: flex; } }
+
+.campaign-card {
+  background-color: white;
+  width: 100%;
+  flex-direction: column;
+  display: flex; }
+  .campaign-card .campaign-card-header {
+    width: 100%;
+    padding: 10;
+    height: 50; }
+    .campaign-card .campaign-card-header .usericon {
+      background-color: #07acd8;
+      font-size: 30;
+      width: 35px;
+      height: 35px;
+      border-radius: 35px;
+      padding: 4;
+      float: left; }
+    .campaign-card .campaign-card-header .name {
+      font-family: Montserrat, sans-serif;
+      font-size: 16;
+      float: left;
+      font-weight: 300;
+      padding: 8; }
+    .campaign-card .campaign-card-header .timeicon {
+      float: right;
+      font-size: 16;
+      padding: 10 0 7;
+      color: #bfbfbf;
+      font-weight: 50; }
+    .campaign-card .campaign-card-header .time {
+      float: right;
+      color: #bfbfbf;
+      font-weight: 50;
+      font-size: 14;
+      padding: 8 0 8; }
+  .campaign-card .campaign-img-holder {
+    background-color: transparent;
+    min-height: 300;
+    background-size: cover;
+    background-position: center;
+    position: relative; }
+  .campaign-card .campaign-card-title {
+    font-size: 16;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1;
+    padding: 15;
+    text-transform: uppercase; }
+  .campaign-card .campaign-card-info {
+    padding: 0 20 0 20;
+    font-family: Montserrat, sans-serif; }
+    .campaign-card .campaign-card-info table {
+      width: 100%;
+      margin: 0; }
+      .campaign-card .campaign-card-info table tbody tr {
+        color: #bfbfbf;
+        border-bottom: 1px dashed gainsboro; }
+        .campaign-card .campaign-card-info table tbody tr td {
+          padding: 5 0 5; }
+  .campaign-card .campaign-footer {
+    font-family: Montserrat, sans-serif;
+    font-size: 12;
+    color: #bfbfbf;
+    padding: 15px;
+    font-weight: 100px;
+    width: 100%;
+    margin-top: auto;
+    align-self: flex-end; }
+    .campaign-card .campaign-footer span.netgained {
+      width: 100%;
+      font-size: 20;
+      font-weight: 600px;
+      letter-spacing: 1; }
+
+.campaign-card-tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  color: white;
+  padding: 0 10 0 10;
+  bottom: 0;
+  position: absolute; }
+  .campaign-card-tags .tag {
+    border-radius: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    border: 0;
+    position: relative;
+    background-color: #ebebeb;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    padding: 3px 8px;
+    line-height: 18px;
+    margin-right: 11px;
+    margin-bottom: 10px; }
+    .campaign-card-tags .tag:after {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(221, 221, 221, 0);
+      border-left-color: #ebebeb;
+      border-width: 12px;
+      margin-top: -12px;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out; }
+    .campaign-card-tags .tag:hover {
+      background-color: #ddd; }
+      .campaign-card-tags .tag:hover:after {
+        border-left-color: #ddd; }
+
+.modal-header {
+  min-height: 400;
+  background-size: cover;
+  background-position: center;
+  font-size: 30;
+  color: lightgrey; }
+  .modal-header i {
+    text-shadow: 0px 2px 12px black; }
+
+.modal-body {
+  padding: 0;
+  font-family: Montserrat, sans-serif; }
+  .modal-body .modal-campaign-wrapper {
+    margin: -15;
+    height: 550; }
+    .modal-body .modal-campaign-wrapper .left-container {
+      height: 100%;
+      background-color: #fafafa; }
+      .modal-body .modal-campaign-wrapper .left-container .block1 {
+        border-bottom: 1.8px solid rgba(153, 153, 153, 0.2);
+        width: 100%;
+        height: 70%;
+        left: 0;
+        padding: 15; }
+        .modal-body .modal-campaign-wrapper .left-container .block1 .calender {
+          height: auto;
+          padding: 15 15 0 0; }
+          .modal-body .modal-campaign-wrapper .left-container .block1 .calender .day {
+            display: inline-flex;
+            height: 18%;
+            width: 22%;
+            margin: 2;
+            background: transparent;
+            border: 2px solid gainsboro; }
+        .modal-body .modal-campaign-wrapper .left-container .block1 .calender-key {
+          width: 100%; }
+      .modal-body .modal-campaign-wrapper .left-container .block2 {
+        height: 30%;
+        width: 100%;
+        left: 0; }
+        .modal-body .modal-campaign-wrapper .left-container .block2 .company-name {
+          font-size: large; }
+    .modal-body .modal-campaign-wrapper .right-container {
+      padding: 25;
+      height: 100%;
+      border-left: 1.8px solid rgba(153, 153, 153, 0.2); }
+      .modal-body .modal-campaign-wrapper .right-container .campaign-title {
+        font-size: x-large;
+        text-transform: uppercase; }
+
+.modal-footer {
+  height: 95;
+  font-family: Montserrat, sans-serif; }
+  .modal-footer .footer-block .modal-footer-left {
+    width: calc(100% - 200px); }
+  .modal-footer .footer-block .apply-btn {
+    background-color: transparent;
+    border: 2px solid #05b6e4;
+    font-size: 20;
+    height: 60;
+    width: 200; }
+  .modal-footer .footer-block .total-amount {
+    font-size: x-large;
+    font-weight: 300;
+    padding: 15; }
+
+.modal-profile-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  background-color: #05b6e4;
+  margin: 20 40% 10 40%; }
+
+.campaign-info-table {
+  padding: 10;
+  width: 100%; }
+  .campaign-info-table th {
+    width: 50%;
+    padding-left: 10px; }
+  .campaign-info-table tbody tr td {
+    padding: 10px 10px 20px 10px;
+    vertical-align: top; }
+    .campaign-info-table tbody tr td .tag {
+      border-radius: 0;
+      text-transform: uppercase;
+      border: 0;
+      position: relative;
+      background-color: #ebebeb;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out;
+      padding: 3px 8px;
+      line-height: 18px;
+      margin-right: 11px;
+      margin-bottom: 10px;
+      display: inline-block; }
+      .campaign-info-table tbody tr td .tag:after {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(221, 221, 221, 0);
+        border-left-color: #ebebeb;
+        border-width: 12px;
+        margin-top: -12px;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+      .campaign-info-table tbody tr td .tag:hover {
+        background-color: #ddd; }
+        .campaign-info-table tbody tr td .tag:hover:after {
+          border-left-color: #ddd; }
+
+.chat-page {
+  width: 100%;
+  height: calc(100% - 75px); }
+  .chat-page .inbox-panel {
+    height: 100%; }
+    .chat-page .inbox-panel .panel {
+      margin-bottom: 0;
+      height: 100%; }
+  .chat-page .messages-panel {
+    height: 100%; }
+    .chat-page .messages-panel .message-panel-header {
+      height: 25%;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid gainsboro; }
+      .chat-page .messages-panel .message-panel-header .panel-bar {
+        width: 100%;
+        height: 30px; }
+
+body {
+  background-color: white;
+  font-family: Montserrat, sans-serif; }
+  body .wrapper {
+    height: 100%; }
+
+.page-content-wrapper {
+  min-height: 100%;
+  background-color: white;
+  overflow-y: auto;
+  margin-left: 75px; }
+
+.page-content {
+  display: inline-block;
+  float: left; }
+
+.theme-blue {
+  color: #05b6e4; }
+
+.theme-lightgrey {
+  color: #fafafa; }
+
+.theme-darkgrey {
+  color: #999999; }
+
+.text-right-align {
+  text-align: right; }
+
+.text-left-align {
+  text-align: left; }
+
+.text-center-align {
+  text-align: center; }
+
+.hover-wrapper {
+  background-color: black;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex; }
+
+.large-font {
+  font-size: large; }
+
+.xlarge-font {
+  font-size: x-large; }
+
+.no-gutter [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+.no-gutter [class*='panel'] {
+  border-radius: 0; }
+
+/*# sourceMappingURL=app.css.map */
