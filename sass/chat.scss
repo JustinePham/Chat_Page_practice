@@ -26,3 +26,81 @@
     
 }
 
+.message-wrapper {
+    
+    width: 100%;
+    height:auto;
+    
+    .bubble-sent {
+        position: relative;
+        display:inline-block;
+        background: #e6f3ff;
+       -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 10px 0 10px;
+        max-width: calc(100% - 150px);
+    
+        &:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 6px 8px 6px 0;
+            border-color: transparent #e6f3ff;
+            display: block;
+            width: 0;
+            z-index: 1;
+            left: -8px;
+            top: 16px;
+        }
+    }
+    
+    .bubble-received {
+        position: relative;
+        display:inline-block;
+        padding: 0px;
+        background: #e6e6e6;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        max-width: calc(100% - 150px);
+        margin: 10px 10px 0 10px;
+        padding: 10px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 6px 0 6px 8px;
+            border-color: transparent #e6e6e6;
+            display: block;
+            width: 0;
+            z-index: 1;
+            right: -8px;
+            top: 16px;
+        }
+    }
+    
+    .timestamp-sent {
+        margin-left: 85px;
+        width: calc(100% - 85px);
+        bottom:0;
+        left:0;
+        display:inline-block;
+    }
+    
+    .timestamp-received {
+       
+        text-align: right;
+        margin-right: 85px;
+        width: calc(100% - 85px);
+        bottom:0;
+        left:0;
+        display:inline-block;
+    }
+}
+
+
+    
+    
