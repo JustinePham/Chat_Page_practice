@@ -452,7 +452,8 @@
         height: 30px; }
 
 .message-wrapper {
-  width: 100%;
+  width: calc(100% - 85px);
+  display: inline-block;
   height: auto; }
   .message-wrapper .bubble-sent {
     position: relative;
@@ -498,18 +499,17 @@
       right: -8px;
       top: 16px; }
   .message-wrapper .timestamp-sent {
-    margin-left: 85px;
-    width: calc(100% - 85px);
+    width: 100%;
     bottom: 0;
-    left: 0;
-    display: inline-block; }
+    display: inline-block;
+    text-align: left;
+    margin-left: 15px; }
   .message-wrapper .timestamp-received {
-    text-align: right;
-    margin-right: 85px;
-    width: calc(100% - 85px);
+    width: 100%;
     bottom: 0;
-    left: 0;
-    display: inline-block; }
+    display: inline-block;
+    text-align: right;
+    padding-right: 15px; }
 
 body {
   background-color: white;

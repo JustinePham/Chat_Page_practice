@@ -28,8 +28,9 @@
 
 .message-wrapper {
     
-    width: 100%;
-    height:auto;
+    width: calc(100% - 85px);
+    display: inline-block;
+    height: auto;
     
     .bubble-sent {
         position: relative;
@@ -83,21 +84,19 @@
     }
     
     .timestamp-sent {
-        margin-left: 85px;
-        width: calc(100% - 85px);
-        bottom:0;
-        left:0;
-        display:inline-block;
+        width: 100%;
+        bottom: 0;
+        display: inline-block;
+        text-align: left;
+        margin-left: 15px;
     }
     
     .timestamp-received {
-       
+        width: 100%;
+        bottom: 0;
+        display: inline-block;
         text-align: right;
-        margin-right: 85px;
-        width: calc(100% - 85px);
-        bottom:0;
-        left:0;
-        display:inline-block;
+        padding-right: 15px;
     }
 }
 
