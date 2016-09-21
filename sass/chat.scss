@@ -10,20 +10,144 @@
             height:100%;
         }
     }
-    .messages-panel {
+    
+    /* * * CSS FOR CHAT AREA * * */
+    .chat-panel {
         height:100%;
+        .chat-panel-body {
+            overflow-y:scroll; 
+            overflow-x:hidden;
+            height: calc(75% - 200px);
+        }
+        .type-message-box {
+            position:absolute;
+            bottom:0;
+            width:100%;
+            border-top: 1px solid gainsboro;
+            height: 150px;
+        }
+    }
+}
+
+.chat-panel-header {
+    height: 25%;
+    background-color: #f5f5f5;   
+    border-bottom: 1px solid gainsboro;
+    position:relative;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: column-reverse; 
+  flex-direction: column-reverse; 
+    
+    .chat-img-wrapper {
+        width:100%;
+        height: 100px;
+        position:relative;
+        .chat-profile-img {
+            margin: auto;  
+            position: absolute;
+            height: 100px;
+            width:100px;
+            border-radius: 100px;
+            left:0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color:grey;
+          
+        }
         
-        .message-panel-header {
-            height: 25%;
-            background-color: #f5f5f5;   
-            border-bottom: 1px solid gainsboro;
-            .panel-bar {
-                width:100%;
-                height:30px;
+        
+    }   
+    
+    .chat-user-details {
+        color:darkgray;
+        text-align:center;
+        p {
+            letter-spacing: 1.5;
+        }
+    }
+    .chat-panel-bar {
+        height:80px;
+        width: 100%;
+    }
+            
+}
+        
+
+
+.chat-menu {
+    
+    li {
+        background-color: transparent;
+        text-transform: uppercase;
+        
+        a {
+            color: darkgrey;
+            &:hover { 
+                background-color:transparent;
             }
         }
     }
     
+    
+}
+.chatmenu-option-panel.panel-body {
+    padding: 0px;
+    
+    .messages-panel {
+        
+        height: calc(100% - 61px);
+        .inbox-message {
+            width:100%;
+            border: 1px solid gainsboro;
+            height: 125px;
+            
+            .profile-img {
+                margin-top: 25px;
+            }
+            
+            .message-preview {
+                padding: 10px;
+                display:inline-block;
+                width: calc(100% - 75px);
+                height: 100%;
+                
+                .message-preview-header {
+                    width:100%;
+                    font-size:14px;
+                    height: auto;
+                    
+                    .sender-details {
+                        display:inline-block;
+                    }
+                    .time-stamp {
+                        display:inline-block;
+                    }
+                }
+                
+                .message-preview-body {
+                    display:inline-block;
+                    width:100%;
+                    height:calc(100% - 30px);
+                    font-size:12px;
+                    white-space: initial;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        
+    }
+}
+
+.chat-menu.nav-pills>li.active>a, .chat-menu.nav-pills>li.active>a:focus, .chat-menu.nav-pills>li.active>a:hover {
+    background-color: transparent;
+    color: darkgray;
 }
 
 .message-wrapper {
@@ -31,6 +155,7 @@
     width: calc(100% - 85px);
     display: inline-block;
     height: auto;
+    margin-bottom: 15px;
     
     .bubble-sent {
         position: relative;

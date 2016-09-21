@@ -1,6 +1,6 @@
 .page-sidebar {
     width: 75px;
-    background-color: rgb(5,182,228);
+    background-color: rgb(43, 47, 59);
     z-index: 1000;
     bottom: 0;
     top: 0;
@@ -11,7 +11,7 @@
     position:fixed;
     
     .sidebar-header {
-        background-color: #07acd8;
+        background-color: rgb(37, 43, 53);
         top: 0;
         height: 75;
         padding: 20px;
@@ -41,14 +41,15 @@
                     width: 45px;
                     height: 45px;
                     padding: 7px;
-                    background-color: darkgray;
+                    background-color: rgb(32, 35, 45);
                     a {
-                        color: white;
+                        color: rgb(120, 128, 149);
                         text-decoration: none;
-                        
+                        &:hover {
+                            transition: all 1s ease-out;
+                            color: white;
+                        }
                     }
-                    
-                    
                 }
             }
         }

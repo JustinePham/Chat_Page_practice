@@ -62,15 +62,14 @@
                             <!--left-->
                             <div class="header-actions-bar header-left">
                                 <ul class="pull-right">
-                                    <li>
-                                        <div class="header-notifications-wrapper">
-                                            <i class="icon-notification2"></i>
-                                        </div>
+                                    <li class="header-notifications-wrapper">
+                                        <i class="icon-notification2"></i>
                                     </li>
                                     <li class="header-messages-wrapper">
-                                        <i class="icon-messages"></i>
+                                        <i class="icon-chat"></i>   
                                     </li>
-                                </ul>
+                                    <li class="border-right"></li>
+                                </ul> 
                             </div>
                             <!-- end left -->
                             
@@ -96,32 +95,87 @@
                             <div class="inbox-panel col-md-5">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                          Panel heading without title
+                                        <ul class="nav nav-pills chat-menu">
+                                          <li class="active"><a href="#">inbox</a></li>
+                                          <li><a href="#">history</a></li>
+                                        </ul>
                                     </div>
-
-                                    <div class="panel-body">
-                                          Panel content
+                                    <div class="panel-body chatmenu-option-panel">
+                                        <div class="messages-panel ">
+                                            <div class="inbox-message">
+                                                <div class="profile-img pull-left">
+                                                    <div class="margin-wrapper-15 header-profileimg-wrapper">
+                                                        <i class="icon-user-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="message-preview">
+                                                    <div class="message-preview-header">
+                                                          <h4 class="pull-left sender-details">Example <span class="label label-default">New</span></h4>
+                                                          <h5 class="time-stamp pull-right">6:45pm</h5>
+                                                    </div>
+                                                    <div class="message-preview-body">
+                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula</p> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="inbox-message">
+                                                <div class="profile-img pull-left">
+                                                    <div class="margin-wrapper-15 header-profileimg-wrapper">
+                                                        <i class="icon-user-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="message-preview">
+                                                    <div class="message-preview-header">
+                                                          <h4 class="pull-left sender-details">Example <span class="label label-default">New</span></h4>
+                                                          <h5 class="time-stamp pull-right">6:45pm</h5>
+                                                    </div>
+                                                    <div class="message-preview-body">
+                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultr</p> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="inbox-message">
+                                                <div class="profile-img pull-left">
+                                                    <div class="margin-wrapper-15 header-profileimg-wrapper">
+                                                        <i class="icon-user-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="message-preview">
+                                                    <div class="message-preview-header">
+                                                          <h4 class="pull-left sender-details">Example <span class="label label-default">New</span></h4>
+                                                          <h5 class="time-stamp pull-right">6:45pm</h5>
+                                                    </div>
+                                                    <div class="message-preview-body">
+                                                        <p>Lorem ipsum dolor sit amet, consectetuer adi</p> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
                                     </div> 
                                 </div>
                  
                             </div> 
-                         
-                        <!--    <div class = " panel panel-default inbox-panel">
-                               <div class = "panel-heading">
-                                  Panel heading without title
-                               </div>
-
-                               <div class = "panel-body">
-                                  Panel content
-                               </div>
-                            </div> -->
-                        <div class="messages-panel col-md-7">
-                            <div class="message-panel-header">
-                                
+                            
+                        <!-- CHAT -->
+                        <div class="chat-panel col-md-7">
+                            
+                            <!-- chat header -->
+                            <div class="chat-panel-header">
+                                <div class="chat-user-details">
+                                    <h3>Kendall</h3>
+                                    <p>CONNECTED SINCE 07.04.2106</p>
+                                </div>
+                                <div class="chat-img-wrapper">
+                                    <div class="chat-profile-img"></div>
+                                </div>
+                                <div class="chat-panel-bar"></div>
                             </div>
                             
-                            <!-- SENT MESSAGE -->
-                            <div class="messages-panel-body">
+                            <!-- chat body -->
+                            <div class="chat-panel-body">
                                 <div class="sent-message-row">
                                     <div class="profile-img pull-left">
                                         <div class="margin-wrapper-15 header-profileimg-wrapper">
@@ -150,8 +204,35 @@
                                         <div class="timestamp-received">18:05</div>
                                     </div>
                                 </div>
-                                
-                                
+                                <div class="received-message-row">
+                                    <div class="profile-img pull-right">
+                                        <div class="margin-wrapper-15 header-profileimg-wrapper">
+                                            <i class="icon-user-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-wrapper">
+                                        <div class="bubble-received pull-right">
+                                            Nullam quis enim eu erat faucibus placerat. Etiam rutrum, dolor quis laoreet egestas, nisi mauris interdum quam, ac pulvinar mi tellus non lorem. Duis tempor lacinia magna eu tincidunt. Nulla id felis at diam suscipit pulvinar. Maecenas libero ligula, pretium non arcu at, consectetur ullamcorper felis. Curabitur nec velit sed elit laoreet lacinia. Praesent eu semper massa. Cras ut mollis quam, vitae accumsan lorem. Etiam vitae magna eu purus cursus pulvinar. Morbi tristique fringilla tortor, vitae pulvinar lectus rhoncus a. Praesent mattis fringilla rhoncus. Sed non molestie nulla. Cras accumsan felis in ipsum lacinia, vel pulvinar eros tincidunt. Proin ullamcorper, mi eget accumsan lacinia, massa felis aliquet erat, scelerisque luctus mauris erat eu velit. Cras cursus est et ante pharetra pretium. Integer efficitur hendrerit maximus.
+                                        </div>
+                                        <div class="timestamp-received">18:05</div>
+                                    </div>
+                                </div>
+                                <div class="received-message-row">
+                                    <div class="profile-img pull-right">
+                                        <div class="margin-wrapper-15 header-profileimg-wrapper">
+                                            <i class="icon-user-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="message-wrapper">
+                                        <div class="bubble-received pull-right">
+                                            Nullam quis enim eu erat faucibus placerat. Etiam rutrum, dolor quis laoreet egestas, nisi mauris interdum quam, ac pulvinar mi tellus non lorem. Duis tempor lacinia magna eu tincidunt. Nulla id felis at diam suscipit pulvinar. Maecenas libero ligula, pretium non arcu at, consectetur ullamcorper felis. Curabitur nec velit sed elit laoreet lacinia. Praesent eu semper massa. Cras ut mollis quam, vitae accumsan lorem. Etiam vitae magna eu purus cursus pulvinar. Morbi tristique fringilla tortor, vitae pulvinar lectus rhoncus a. Praesent mattis fringilla rhoncus. Sed non molestie nulla. Cras accumsan felis in ipsum lacinia, vel pulvinar eros tincidunt. Proin ullamcorper, mi eget accumsan lacinia, massa felis aliquet erat, scelerisque luctus mauris erat eu velit. Cras cursus est et ante pharetra pretium. Integer efficitur hendrerit maximus.
+                                        </div>
+                                        <div class="timestamp-received">18:05</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="type-message-box">
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
                             </div>
                         </div>
                       </div> 
