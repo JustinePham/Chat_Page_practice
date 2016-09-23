@@ -1,0 +1,180 @@
+
+ 
+.homepage-campaigns .campaign-card-wrapper {
+  /*  -webkit-flex: 1;  /* Safari 6.1+ */
+   /* -ms-flex: 1;  /* IE 10 */
+   /* flex: 1; */   
+    margin:0 5px 10px 5px;
+    width: calc((100% / 4) - 10px);
+    background-color: white;
+    display: flex;
+    
+    @media (min-width: 992px) and (max-width: 1280px) {
+        margin:0 5px 10px 5px;
+        width: calc((100% / 3) - 10px);
+        background-color: white;
+        display: flex;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin:0 5px 10px 5px;
+        width: calc((100% / 2) - 10px);
+        background-color: white;
+        display: flex;
+    }
+    @media (min-width: 376px) and (max-width: 767px) {
+        margin:0 5px 10px 5px;
+        width: calc(100% - 10px);
+        background-color: white;
+        display: flex;
+    }
+}
+
+
+.campaign-card {
+    
+    background-color: white;  
+    width:100%;   
+    flex-direction: column;
+    display: flex;
+    
+    .campaign-card-header {
+        width:100%;
+        padding: 10;
+        height: 50;
+        
+        .usericon {
+            background-color: rgb(7,172,216);
+            font-size: 30;
+            width:35px;
+            height:35px;
+            border-radius: 35px;
+            padding: 4;
+            float:left;
+        }
+        .name{ 
+            font-family: Montserrat, sans-serif;
+            font-size: 16;
+            float:left;
+            font-weight:300;
+            padding: 8;
+        }
+        .timeicon{
+            float:right;
+            font-size: 16;
+            padding:10 0 7;
+            color:#bfbfbf;
+            font-weight:50;
+        }
+        .time{ 
+            float:right;
+            color: #bfbfbf;
+            font-weight:50;
+            font-size: 14;
+            padding:8 0 8;
+
+        }
+    }
+    .campaign-img-holder {
+        background-color:transparent;
+        min-height: 300;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        
+    }
+    .campaign-card-title {
+        font-size: 16;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 1;
+        padding:15;
+        text-transform: uppercase;
+    }
+    .campaign-card-info {
+        padding: 0 20 0 20;
+        font-family: Montserrat, sans-serif;
+        table {
+            width: 100%;
+            margin: 0;
+            tbody {
+                tr {
+                    color: #bfbfbf;
+                    border-bottom: 1px dashed gainsboro;
+                    td {
+                        padding: 5 0 5;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    .campaign-footer {
+        font-family: Montserrat, sans-serif;
+        font-size:12;
+        color:#bfbfbf;
+        padding: 15px;
+        font-weight:100px;
+        width: 100%;
+        margin-top: auto;
+        align-self: flex-end;
+        
+        span.netgained {
+            width:100%;
+            font-size: 20;
+            font-weight: 600px;
+            letter-spacing: 1;
+        }
+    }
+    
+}
+
+
+
+.campaign-card-tags {
+    list-style: none;
+    margin: 0;
+    overflow: hidden; 
+    padding: 0;
+    color:white;
+    padding:0 10 0 10;
+    bottom: 0;
+    position: absolute;
+    
+    .tag {
+        border-radius: 0;
+        display:inline-block;
+        text-transform: uppercase;
+        border: 0;
+        position: relative;
+        background-color: #ebebeb;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+        padding: 3px 8px;
+        line-height: 18px;
+        margin-right: 11px;
+        margin-bottom: 10px;
+        &:after {
+            left: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(221, 221, 221, 0);
+            border-left-color: #ebebeb;
+            border-width: 12px;
+            margin-top: -12px; 
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+        &:hover {
+            background-color: #ddd;
+            &:after {
+                border-left-color: #ddd;
+            }
+        }
+    }
+}

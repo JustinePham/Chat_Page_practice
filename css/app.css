@@ -1,0 +1,754 @@
+.page-sidebar {
+  width: 75px;
+  background-color: #2b2f3b;
+  z-index: 1000;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: auto;
+  height: 100%;
+  overflow-y: hidden;
+  position: fixed; }
+  .page-sidebar .sidebar-header {
+    background-color: #252b35;
+    top: 0;
+    height: 75;
+    padding: 20px; }
+    .page-sidebar .sidebar-header span i {
+      color: white; }
+  .page-sidebar .sidebar-menu {
+    text-align: right; }
+    .page-sidebar .sidebar-menu ul {
+      width: 100%;
+      padding-left: 0;
+      list-style: none; }
+      .page-sidebar .sidebar-menu ul li {
+        width: 100%;
+        text-align: right;
+        height: 60px;
+        padding: 15px; }
+        .page-sidebar .sidebar-menu ul li div {
+          font-size: 30px;
+          width: 45px;
+          height: 45px;
+          padding: 7px;
+          background-color: #20232d; }
+          .page-sidebar .sidebar-menu ul li div a {
+            color: #788095;
+            text-decoration: none; }
+            .page-sidebar .sidebar-menu ul li div a:hover {
+              transition: all 1s ease-out;
+              color: white; }
+
+.site-header {
+  background-color: white;
+  height: 75;
+  z-index: 999;
+  width: calc(100% - 75px);
+  border-bottom: 2px solid rgba(153, 153, 153, 0.2);
+  z-index: 99;
+  position: fixed;
+  margin-left: 90px; }
+  .site-header .header-actions-bar {
+    font-weight: 300;
+    color: lightgrey;
+    margin-left: 20; }
+    .site-header .header-actions-bar .profile-img {
+      width: 70px;
+      padding: 0 10 0 10;
+      margin-top: 20; }
+    .site-header .header-actions-bar .header-username {
+      line-height: 5; }
+      .site-header .header-actions-bar .header-username p {
+        font-size: 16;
+        font-weight: 200;
+        color: black;
+        height: 75;
+        margin: 0; }
+    .site-header .header-actions-bar ul {
+      font-size: 32;
+      height: 75;
+      margin: 0;
+      line-height: 2.8; }
+      .site-header .header-actions-bar ul li {
+        display: inline-block;
+        margin: 0 10 0 10; }
+        .site-header .header-actions-bar ul li .header-messages-wrapper .icon-messages {
+          border-right: 1px solid darkgrey; }
+
+.header-social {
+  float: right;
+  height: 75; }
+  .header-social ul {
+    display: inline;
+    font-size: 30;
+    text-align: right;
+    margin: 0 15 0 15;
+    line-height: 3;
+    float: right;
+    list-style: none;
+    height: 75; }
+    .header-social ul li {
+      display: inline-block; }
+      .header-social ul li .social-media-icon {
+        color: white;
+        border-radius: 5px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 5;
+        background-color: #07acd8; }
+        .header-social ul li .social-media-icon i:before {
+          line-height: 1.18; }
+        .header-social ul li .social-media-icon:hover {
+          background-color: #05b6e4; }
+
+.header-search {
+  width: 60%;
+  display: inline;
+  display: inline-block;
+  margin-left: 10;
+  line-height: 3; }
+  .header-search a {
+    color: #07acd8; }
+    .header-search a:hover {
+      text-decoration: none;
+      color: #05b6e4; }
+  .header-search input {
+    font-size: 18;
+    border: 0;
+    text-align: right; }
+    .header-search input:focus {
+      outline: none; }
+
+.border-right {
+  height: 32px;
+  border-right: 2px solid gainsboro; }
+
+.header {
+  padding-bottom: 0;
+  height: 75; }
+
+.header-left {
+  width: 30%;
+  float: left;
+  height: 75; }
+
+.header-right {
+  width: 55%;
+  float: right;
+  font-size: 25px;
+  line-height: 2.5;
+  height: 75;
+  margin: 0; }
+
+.header-profileimg-wrapper {
+  background-color: #07acd8;
+  font-size: 30;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  padding: 4; }
+
+.homepage-slider {
+  margin-top: 0;
+  padding-top: 0;
+  min-height: 300px; }
+
+.homepage-campaign-bar {
+  height: 70;
+  border-bottom: 1px solid darkgray;
+  border-top: 1px solid darkgray;
+  font-weight: 100;
+  font-size: 20;
+  font-family: Montserrat, sans-serif;
+  padding: 20; }
+  .homepage-campaign-bar ul {
+    display: inline-block; }
+  .homepage-campaign-bar .bar-content label {
+    margin-right: 25; }
+
+.homepage-campaigns {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 10px 5px 0 5px; }
+
+.homepage-slider .carousel-inner .item {
+  background-color: gainsboro;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px; }
+
+.homepage-campaigns .campaign-card-wrapper {
+  /*  -webkit-flex: 1;  /* Safari 6.1+ */
+  /* -ms-flex: 1;  /* IE 10 */
+  /* flex: 1; */
+  margin: 0 5px 10px 5px;
+  width: calc((100% / 4) - 10px);
+  background-color: white;
+  display: flex; }
+  @media (min-width: 992px) and (max-width: 1280px) {
+    .homepage-campaigns .campaign-card-wrapper {
+      margin: 0 5px 10px 5px;
+      width: calc((100% / 3) - 10px);
+      background-color: white;
+      display: flex; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .homepage-campaigns .campaign-card-wrapper {
+      margin: 0 5px 10px 5px;
+      width: calc((100% / 2) - 10px);
+      background-color: white;
+      display: flex; } }
+  @media (min-width: 376px) and (max-width: 767px) {
+    .homepage-campaigns .campaign-card-wrapper {
+      margin: 0 5px 10px 5px;
+      width: calc(100% - 10px);
+      background-color: white;
+      display: flex; } }
+
+.campaign-card {
+  background-color: white;
+  width: 100%;
+  flex-direction: column;
+  display: flex; }
+  .campaign-card .campaign-card-header {
+    width: 100%;
+    padding: 10;
+    height: 50; }
+    .campaign-card .campaign-card-header .usericon {
+      background-color: #07acd8;
+      font-size: 30;
+      width: 35px;
+      height: 35px;
+      border-radius: 35px;
+      padding: 4;
+      float: left; }
+    .campaign-card .campaign-card-header .name {
+      font-family: Montserrat, sans-serif;
+      font-size: 16;
+      float: left;
+      font-weight: 300;
+      padding: 8; }
+    .campaign-card .campaign-card-header .timeicon {
+      float: right;
+      font-size: 16;
+      padding: 10 0 7;
+      color: #bfbfbf;
+      font-weight: 50; }
+    .campaign-card .campaign-card-header .time {
+      float: right;
+      color: #bfbfbf;
+      font-weight: 50;
+      font-size: 14;
+      padding: 8 0 8; }
+  .campaign-card .campaign-img-holder {
+    background-color: transparent;
+    min-height: 300;
+    background-size: cover;
+    background-position: center;
+    position: relative; }
+  .campaign-card .campaign-card-title {
+    font-size: 16;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1;
+    padding: 15;
+    text-transform: uppercase; }
+  .campaign-card .campaign-card-info {
+    padding: 0 20 0 20;
+    font-family: Montserrat, sans-serif; }
+    .campaign-card .campaign-card-info table {
+      width: 100%;
+      margin: 0; }
+      .campaign-card .campaign-card-info table tbody tr {
+        color: #bfbfbf;
+        border-bottom: 1px dashed gainsboro; }
+        .campaign-card .campaign-card-info table tbody tr td {
+          padding: 5 0 5; }
+  .campaign-card .campaign-footer {
+    font-family: Montserrat, sans-serif;
+    font-size: 12;
+    color: #bfbfbf;
+    padding: 15px;
+    font-weight: 100px;
+    width: 100%;
+    margin-top: auto;
+    align-self: flex-end; }
+    .campaign-card .campaign-footer span.netgained {
+      width: 100%;
+      font-size: 20;
+      font-weight: 600px;
+      letter-spacing: 1; }
+
+.campaign-card-tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  color: white;
+  padding: 0 10 0 10;
+  bottom: 0;
+  position: absolute; }
+  .campaign-card-tags .tag {
+    border-radius: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    border: 0;
+    position: relative;
+    background-color: #ebebeb;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    padding: 3px 8px;
+    line-height: 18px;
+    margin-right: 11px;
+    margin-bottom: 10px; }
+    .campaign-card-tags .tag:after {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(221, 221, 221, 0);
+      border-left-color: #ebebeb;
+      border-width: 12px;
+      margin-top: -12px;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out; }
+    .campaign-card-tags .tag:hover {
+      background-color: #ddd; }
+      .campaign-card-tags .tag:hover:after {
+        border-left-color: #ddd; }
+
+.modal-header {
+  min-height: 400;
+  background-size: cover;
+  background-position: center;
+  font-size: 30;
+  color: lightgrey; }
+  .modal-header i {
+    text-shadow: 0px 2px 12px black; }
+
+.modal-body {
+  padding: 0;
+  font-family: Montserrat, sans-serif; }
+  .modal-body .modal-campaign-wrapper {
+    margin: -15;
+    height: 550; }
+    .modal-body .modal-campaign-wrapper .left-container {
+      height: 100%;
+      background-color: #fafafa; }
+      .modal-body .modal-campaign-wrapper .left-container .block1 {
+        border-bottom: 1.8px solid rgba(153, 153, 153, 0.2);
+        width: 100%;
+        height: 70%;
+        left: 0;
+        padding: 15; }
+        .modal-body .modal-campaign-wrapper .left-container .block1 .calender {
+          height: auto;
+          padding: 15 15 0 0; }
+          .modal-body .modal-campaign-wrapper .left-container .block1 .calender .day {
+            display: inline-flex;
+            height: 18%;
+            width: 22%;
+            margin: 2;
+            background: transparent;
+            border: 2px solid gainsboro; }
+        .modal-body .modal-campaign-wrapper .left-container .block1 .calender-key {
+          width: 100%; }
+      .modal-body .modal-campaign-wrapper .left-container .block2 {
+        height: 30%;
+        width: 100%;
+        left: 0; }
+        .modal-body .modal-campaign-wrapper .left-container .block2 .company-name {
+          font-size: large; }
+    .modal-body .modal-campaign-wrapper .right-container {
+      padding: 25;
+      height: 100%;
+      border-left: 1.8px solid rgba(153, 153, 153, 0.2); }
+      .modal-body .modal-campaign-wrapper .right-container .campaign-title {
+        font-size: x-large;
+        text-transform: uppercase; }
+
+.modal-footer {
+  height: 95;
+  font-family: Montserrat, sans-serif; }
+  .modal-footer .footer-block .modal-footer-left {
+    width: calc(100% - 200px); }
+  .modal-footer .footer-block .apply-btn {
+    background-color: transparent;
+    border: 2px solid #05b6e4;
+    font-size: 20;
+    height: 60;
+    width: 200; }
+  .modal-footer .footer-block .total-amount {
+    font-size: x-large;
+    font-weight: 300;
+    padding: 15; }
+
+.modal-profile-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  background-color: #05b6e4;
+  margin: 20 40% 10 40%; }
+
+.campaign-info-table {
+  padding: 10;
+  width: 100%; }
+  .campaign-info-table th {
+    width: 50%;
+    padding-left: 10px; }
+  .campaign-info-table tbody tr td {
+    padding: 10px 10px 20px 10px;
+    vertical-align: top; }
+    .campaign-info-table tbody tr td .tag {
+      border-radius: 0;
+      text-transform: uppercase;
+      border: 0;
+      position: relative;
+      background-color: #ebebeb;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out;
+      padding: 3px 8px;
+      line-height: 18px;
+      margin-right: 11px;
+      margin-bottom: 10px;
+      display: inline-block; }
+      .campaign-info-table tbody tr td .tag:after {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(221, 221, 221, 0);
+        border-left-color: #ebebeb;
+        border-width: 12px;
+        margin-top: -12px;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out; }
+      .campaign-info-table tbody tr td .tag:hover {
+        background-color: #ddd; }
+        .campaign-info-table tbody tr td .tag:hover:after {
+          border-left-color: #ddd; }
+
+.chat-page {
+  width: 100%;
+  overflow: hidden;
+  /* * * CSS FOR CHAT AREA * * */ }
+  .chat-page .chat-panel {
+    height: 100%;
+    border-left: 1px solid rgba(153, 153, 153, 0.2); }
+    .chat-page .chat-panel .chat-panel-body {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: calc(100% - 344px); }
+    .chat-page .chat-panel .type-message-box {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border-top: 1px solid rgba(153, 153, 153, 0.2);
+      height: 135px; }
+      .chat-page .chat-panel .type-message-box .message-input-bar {
+        width: 100%;
+        height: 35px; }
+
+.inbox-panel {
+  -webkit-box-shadow: 6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+  -moz-box-shadow: 6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+  box-shadow: 6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+  z-index: 10;
+  height: 100%; }
+  .inbox-panel .panel {
+    margin-bottom: 0;
+    height: 100%;
+    border: none;
+    background-color: whitesmoke; }
+  .inbox-panel .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+    padding: 5px 5px; }
+
+.chat-panel-header {
+  height: 209px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid gainsboro;
+  position: relative;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse; }
+  .chat-panel-header .chat-img-wrapper {
+    width: 100%;
+    height: 114px;
+    position: relative; }
+    .chat-panel-header .chat-img-wrapper .chat-profile-img {
+      margin: auto;
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      border-radius: 100px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: grey; }
+  .chat-panel-header .chat-user-details {
+    color: darkgray;
+    text-align: center; }
+    .chat-panel-header .chat-user-details p {
+      letter-spacing: 1;
+      font-size: 11px;
+      margin-bottom: 18px; }
+    .chat-panel-header .chat-user-details h4 {
+      color: black;
+      font-family: montserrat;
+      margin-bottom: 5px; }
+  .chat-panel-header .chat-panel-bar {
+    height: 35px;
+    width: 100%; }
+
+.chat-menu li {
+  background-color: transparent;
+  text-transform: uppercase; }
+  .chat-menu li a {
+    color: darkgrey; }
+    .chat-menu li a:hover {
+      background-color: transparent; }
+
+.chatmenu-option-panel.panel-body {
+  padding: 0px;
+  height: 100%; }
+  .chatmenu-option-panel.panel-body .messages-panel {
+    overflow-y: scroll;
+    height: calc(100% - 51px); }
+    .chatmenu-option-panel.panel-body .messages-panel .inbox-message {
+      width: 100%;
+      border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+      height: 95px;
+      background-color: white;
+      font-family: Montserrat, sans-serif; }
+      .chatmenu-option-panel.panel-body .messages-panel .inbox-message .profile-img {
+        margin-top: 12px; }
+      .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview {
+        padding: 10px;
+        display: inline-block;
+        width: calc(100% - 75px);
+        height: 85%; }
+        .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-header {
+          width: 100%;
+          font-size: 14px;
+          height: auto; }
+          .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-header .sender-details {
+            display: inline-block; }
+          .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-header .time-stamp {
+            display: inline-block;
+            font-weight: 300;
+            color: gray; }
+        .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-body {
+          display: inline-block;
+          width: 85%;
+          height: calc(100% - 30px);
+          white-space: initial;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+          .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-body p {
+            font-size: 11px;
+            color: grey;
+            font-weight: lighter; }
+
+.chat-menu.nav-pills > li.active > a, .chat-menu.nav-pills > li.active > a:focus, .chat-menu.nav-pills > li.active > a:hover {
+  background-color: transparent;
+  color: darkgray; }
+
+.message-wrapper {
+  width: calc(100% - 85px);
+  display: inline-block;
+  height: auto;
+  margin-bottom: 15px; }
+  .message-wrapper .bubble-sent {
+    position: relative;
+    display: inline-block;
+    background: #e6f3ff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 10px 0 10px;
+    max-width: calc(100% - 150px); }
+    .message-wrapper .bubble-sent:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 6px 8px 6px 0;
+      border-color: transparent #e6f3ff;
+      display: block;
+      width: 0;
+      z-index: 1;
+      left: -8px;
+      top: 16px; }
+  .message-wrapper .bubble-received {
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    background: #e6e6e6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 10px;
+    max-width: calc(100% - 150px);
+    margin: 10px 10px 0 10px;
+    padding: 20px; }
+    .message-wrapper .bubble-received:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 6px 0 6px 8px;
+      border-color: transparent #e6e6e6;
+      display: block;
+      width: 0;
+      z-index: 1;
+      right: -6px;
+      top: 16px; }
+  .message-wrapper .timestamp-sent {
+    width: 100%;
+    bottom: 0;
+    display: inline-block;
+    text-align: left;
+    margin-left: 15px; }
+  .message-wrapper .timestamp-received {
+    width: 100%;
+    bottom: 0;
+    display: inline-block;
+    text-align: right;
+    padding-right: 15px; }
+
+body {
+  background-color: white;
+  font-family: Montserrat, sans-serif;
+  overflow: hidden; }
+  body .wrapper {
+    overflow: hidden; }
+
+.page-content-wrapper {
+  background-color: white;
+  overflow: hidden;
+  margin-left: 75px; }
+
+.page-content {
+  display: inline-block;
+  float: left; }
+
+.theme-blue {
+  color: #05b6e4; }
+
+.theme-lightgrey {
+  color: #fafafa; }
+
+.theme-darkgrey {
+  color: #999999; }
+
+.text-right-align {
+  text-align: right; }
+
+.text-left-align {
+  text-align: left; }
+
+.text-center-align {
+  text-align: center; }
+
+.hover-wrapper {
+  background-color: black;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex; }
+
+.large-font {
+  font-size: large; }
+
+.xlarge-font {
+  font-size: x-large; }
+
+.margin-wrapper-15 {
+  margin: 15px; }
+
+.no-gutter [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+.no-gutter [class*='panel'] {
+  border-radius: 0; }
+
+.page-content-area {
+  overflow-y: scroll;
+  height: calc(100% - 75px); }
+
+/*** LABEL COLORS **/
+.label-grey {
+  background-color: #a4a4a4; }
+
+/*** INPUT STYLING ***/
+.input-override input[type="text"] {
+  border: none; }
+
+.input-override.textarea {
+  border: none;
+  resize: none;
+  border: none;
+  border-radius: 0; }
+  .input-override.textarea:focus {
+    border: none;
+    border-radius: 0;
+    box-shadow: none; }
+
+textarea.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  resize: none;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 0; }
+  textarea.form-control:focus {
+    border: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0; }
+
+.input-override .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  resize: none;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 0; }
+  .input-override .form-control:focus {
+    border: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0; }
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,40 @@
+.homepage-slider {
+    margin-top:0;
+    padding-top:0;
+    min-height: 300px;
+}
+.homepage-campaign-bar {
+    height: 70;
+    border-bottom: 1px solid darkgray;
+    border-top: 1px solid darkgray;
+    font-weight: 100;
+    font-size: 20;
+    font-family: Montserrat, sans-serif;
+    padding: 20;
+    ul {
+        display:inline-block;
+    }
+    
+    .bar-content {
+        label {
+            margin-right: 25;
+        }
+    }
+}
+
+.homepage-campaigns {
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;    
+    padding: 10px 5px 0 5px;
+}
+
+.homepage-slider .carousel-inner .item {
+  background-color: gainsboro;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+
+} 
