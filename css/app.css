@@ -44,9 +44,11 @@
   background-color: white;
   height: 75;
   z-index: 999;
-  width: 100%;
-  /* replace later with mixin */
-  border-bottom: 1.8px solid rgba(153, 153, 153, 0.2); }
+  width: calc(100% - 75px);
+  border-bottom: 2px solid rgba(153, 153, 153, 0.2);
+  z-index: 99;
+  position: fixed;
+  margin-left: 90px; }
   .site-header .header-actions-bar {
     font-weight: 300;
     color: lightgrey;
@@ -440,28 +442,44 @@
 
 .chat-page {
   width: 100%;
-  height: calc(100% - 75px);
+  overflow: hidden;
   /* * * CSS FOR CHAT AREA * * */ }
-  .chat-page .inbox-panel {
-    height: 100%; }
-    .chat-page .inbox-panel .panel {
-      margin-bottom: 0;
-      height: 100%; }
   .chat-page .chat-panel {
-    height: 100%; }
+    height: 100%;
+    border-left: 1px solid rgba(153, 153, 153, 0.2); }
     .chat-page .chat-panel .chat-panel-body {
       overflow-y: scroll;
       overflow-x: hidden;
-      height: calc(75% - 200px); }
+      height: calc(100% - 344px); }
     .chat-page .chat-panel .type-message-box {
       position: absolute;
       bottom: 0;
       width: 100%;
-      border-top: 1px solid gainsboro;
-      height: 150px; }
+      border-top: 1px solid rgba(153, 153, 153, 0.2);
+      height: 135px; }
+      .chat-page .chat-panel .type-message-box .message-input-bar {
+        width: 100%;
+        height: 35px; }
+
+.inbox-panel {
+  -webkit-box-shadow: 6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+  -moz-box-shadow: 6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+  box-shadow: 6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+  z-index: 10;
+  height: 100%; }
+  .inbox-panel .panel {
+    margin-bottom: 0;
+    height: 100%;
+    border: none;
+    background-color: whitesmoke; }
+  .inbox-panel .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+    padding: 5px 5px; }
 
 .chat-panel-header {
-  height: 25%;
+  height: 209px;
   background-color: #f5f5f5;
   border-bottom: 1px solid gainsboro;
   position: relative;
@@ -475,7 +493,7 @@
   flex-direction: column-reverse; }
   .chat-panel-header .chat-img-wrapper {
     width: 100%;
-    height: 100px;
+    height: 114px;
     position: relative; }
     .chat-panel-header .chat-img-wrapper .chat-profile-img {
       margin: auto;
@@ -492,9 +510,15 @@
     color: darkgray;
     text-align: center; }
     .chat-panel-header .chat-user-details p {
-      letter-spacing: 1.5; }
+      letter-spacing: 1;
+      font-size: 11px;
+      margin-bottom: 18px; }
+    .chat-panel-header .chat-user-details h4 {
+      color: black;
+      font-family: montserrat;
+      margin-bottom: 5px; }
   .chat-panel-header .chat-panel-bar {
-    height: 80px;
+    height: 35px;
     width: 100%; }
 
 .chat-menu li {
@@ -506,20 +530,24 @@
       background-color: transparent; }
 
 .chatmenu-option-panel.panel-body {
-  padding: 0px; }
+  padding: 0px;
+  height: 100%; }
   .chatmenu-option-panel.panel-body .messages-panel {
-    height: calc(100% - 61px); }
+    overflow-y: scroll;
+    height: calc(100% - 51px); }
     .chatmenu-option-panel.panel-body .messages-panel .inbox-message {
       width: 100%;
-      border: 1px solid gainsboro;
-      height: 125px; }
+      border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+      height: 95px;
+      background-color: white;
+      font-family: Montserrat, sans-serif; }
       .chatmenu-option-panel.panel-body .messages-panel .inbox-message .profile-img {
-        margin-top: 25px; }
+        margin-top: 12px; }
       .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview {
         padding: 10px;
         display: inline-block;
         width: calc(100% - 75px);
-        height: 100%; }
+        height: 85%; }
         .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-header {
           width: 100%;
           font-size: 14px;
@@ -527,15 +555,20 @@
           .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-header .sender-details {
             display: inline-block; }
           .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-header .time-stamp {
-            display: inline-block; }
+            display: inline-block;
+            font-weight: 300;
+            color: gray; }
         .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-body {
           display: inline-block;
-          width: 100%;
+          width: 85%;
           height: calc(100% - 30px);
-          font-size: 12px;
           white-space: initial;
           overflow: hidden;
           text-overflow: ellipsis; }
+          .chatmenu-option-panel.panel-body .messages-panel .inbox-message .message-preview .message-preview-body p {
+            font-size: 11px;
+            color: grey;
+            font-weight: lighter; }
 
 .chat-menu.nav-pills > li.active > a, .chat-menu.nav-pills > li.active > a:focus, .chat-menu.nav-pills > li.active > a:hover {
   background-color: transparent;
@@ -552,8 +585,8 @@
     background: #e6f3ff;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 20px;
     margin: 10px 10px 0 10px;
     max-width: calc(100% - 150px); }
     .message-wrapper .bubble-sent:after {
@@ -574,10 +607,10 @@
     background: #e6e6e6;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     max-width: calc(100% - 150px);
     margin: 10px 10px 0 10px;
-    padding: 10px; }
+    padding: 20px; }
     .message-wrapper .bubble-received:after {
       content: '';
       position: absolute;
@@ -587,7 +620,7 @@
       display: block;
       width: 0;
       z-index: 1;
-      right: -8px;
+      right: -6px;
       top: 16px; }
   .message-wrapper .timestamp-sent {
     width: 100%;
@@ -604,14 +637,14 @@
 
 body {
   background-color: white;
-  font-family: Montserrat, sans-serif; }
+  font-family: Montserrat, sans-serif;
+  overflow: hidden; }
   body .wrapper {
-    height: 100%; }
+    overflow: hidden; }
 
 .page-content-wrapper {
-  min-height: 100%;
   background-color: white;
-  overflow-y: auto;
+  overflow: hidden;
   margin-left: 75px; }
 
 .page-content {
@@ -657,5 +690,65 @@ body {
   padding-left: 0; }
 .no-gutter [class*='panel'] {
   border-radius: 0; }
+
+.page-content-area {
+  overflow-y: scroll;
+  height: calc(100% - 75px); }
+
+/*** LABEL COLORS **/
+.label-grey {
+  background-color: #a4a4a4; }
+
+/*** INPUT STYLING ***/
+.input-override input[type="text"] {
+  border: none; }
+
+.input-override.textarea {
+  border: none;
+  resize: none;
+  border: none;
+  border-radius: 0; }
+  .input-override.textarea:focus {
+    border: none;
+    border-radius: 0;
+    box-shadow: none; }
+
+textarea.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  resize: none;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 0; }
+  textarea.form-control:focus {
+    border: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0; }
+
+.input-override .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  resize: none;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 0; }
+  .input-override .form-control:focus {
+    border: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0; }
 
 /*# sourceMappingURL=app.css.map */

@@ -22,16 +22,16 @@ $desktop: "(min-width: 1281px)";
 body {
     background-color: white;
     font-family: $default_font;
+    overflow:hidden;
     .wrapper{
-        height: 100%;
+        overflow:hidden;
     }
 }
 
 .page-content-wrapper{
-    min-height: 100%; 
     background-color: white;
-    overflow-y: auto;
-    margin-left:75px;
+    overflow: hidden;
+    margin-left: 75px;
 }
 .page-content {
     display: inline-block;
@@ -81,6 +81,7 @@ body {
 .margin-wrapper-15 {
     margin: 15px;
 }
+
 .no-gutter {    
     [class*='col-'] {
         padding-right:0;
@@ -90,3 +91,82 @@ body {
         border-radius: 0;
     }
 }
+
+.page-content-area {
+    overflow-y: scroll;
+    height: calc(100% - 75px);
+    
+}
+
+
+/*** LABEL COLORS **/
+.label-grey {
+    background-color: rgb(164,164,164);
+}
+
+/*** INPUT STYLING ***/ 
+
+
+.input-override input[type="text"] {
+    border:none;
+}
+
+.input-override.textarea{
+    border:none;
+    resize: none;
+    border:none;
+    border-radius: 0;
+    &:focus {
+       border:none;
+       border-radius: 0;
+       box-shadow:none;
+      
+    }
+}
+
+textarea.form-control {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        resize: none;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border:none;
+        border-radius: 0;
+    
+        &:focus {
+            border:none;
+            box-shadow: none;
+            border:none;
+            border-radius: 0;
+    }
+}
+.input-override .form-control {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        resize: none;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border:none;
+        border-radius: 0;
+    
+        &:focus {
+            border:none;
+            box-shadow: none;
+            border:none;
+            border-radius: 0;
+    }
+}
+
+
+
+

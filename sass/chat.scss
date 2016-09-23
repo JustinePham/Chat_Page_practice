@@ -1,36 +1,54 @@
 
 .chat-page {
-    
     width: 100%;
-    height: calc(100% - 75px);
-    .inbox-panel {
-        height:100%;
-        .panel {
-            margin-bottom: 0;
-            height:100%;
-        }
-    }
+    overflow: hidden;
     
     /* * * CSS FOR CHAT AREA * * */
     .chat-panel {
         height:100%;
+        border-left: 1px solid rgba(153, 153, 153, 0.2);
         .chat-panel-body {
             overflow-y:scroll; 
             overflow-x:hidden;
-            height: calc(75% - 200px);
+            height: calc(100% - 344px);
         }
         .type-message-box {
             position:absolute;
             bottom:0;
             width:100%;
-            border-top: 1px solid gainsboro;
-            height: 150px;
+            border-top: 1px solid rgba(153, 153, 153, 0.2);
+            height: 135px;
+            
+            .message-input-bar {
+                width:100%;
+                height: 35px;
+            }
         }
     }
 }
 
+.inbox-panel {
+    -webkit-box-shadow: 6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+    -moz-box-shadow:    6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+    box-shadow:         6px 0px 25px -6px rgba(50, 50, 50, 0.23);
+    z-index:10;
+    height:100%;
+    .panel {
+        margin-bottom: 0;
+        height:100%;
+        border: none;
+        background-color:rgb(245,245,245);
+    }
+    .panel-heading {
+        color: #333;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+        padding: 5px 5px;
+    }
+}
+
 .chat-panel-header {
-    height: 25%;
+    height: 209px;
     background-color: #f5f5f5;   
     border-bottom: 1px solid gainsboro;
     position:relative;
@@ -45,7 +63,7 @@
     
     .chat-img-wrapper {
         width:100%;
-        height: 100px;
+        height: 114px;
         position:relative;
         .chat-profile-img {
             margin: auto;  
@@ -68,11 +86,18 @@
         color:darkgray;
         text-align:center;
         p {
-            letter-spacing: 1.5;
+            letter-spacing: 1;
+            font-size: 11px;
+            margin-bottom: 18px;
+        }
+        h4 {
+            color: black;
+            font-family: montserrat;
+            margin-bottom: 5px;
         }
     }
     .chat-panel-bar {
-        height:80px;
+        height:35px;
         width: 100%;
     }
             
@@ -98,24 +123,26 @@
 }
 .chatmenu-option-panel.panel-body {
     padding: 0px;
-    
+    height:100%;
     .messages-panel {
-        
-        height: calc(100% - 61px);
+        overflow-y: scroll;
+        height: calc(100% - 51px);
         .inbox-message {
             width:100%;
-            border: 1px solid gainsboro;
-            height: 125px;
-            
+            border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+            height: 95px;
+            background-color: white;
+            font-family: Montserrat, sans-serif;
             .profile-img {
-                margin-top: 25px;
+                margin-top: 12px;
+                
             }
             
             .message-preview {
                 padding: 10px;
                 display:inline-block;
                 width: calc(100% - 75px);
-                height: 100%;
+                height: 85%;
                 
                 .message-preview-header {
                     width:100%;
@@ -127,17 +154,24 @@
                     }
                     .time-stamp {
                         display:inline-block;
+                        font-weight:300;
+                        color: gray;
                     }
                 }
                 
                 .message-preview-body {
                     display:inline-block;
-                    width:100%;
+                    width:85%;
                     height:calc(100% - 30px);
-                    font-size:12px;
                     white-space: initial;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    
+                    p {
+                        font-size:11px;
+                        color:grey;
+                        font-weight:lighter;
+                    }
                 }
             }
         }
@@ -163,8 +197,8 @@
         background: #e6f3ff;
        -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
-        border-radius: 5px;
-        padding: 10px;
+        border-radius: 10px;
+        padding: 20px;
         margin: 10px 10px 0 10px;
         max-width: calc(100% - 150px);
     
@@ -189,10 +223,10 @@
         background: #e6e6e6;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
-        border-radius: 5px;
+        border-radius: 10px;
         max-width: calc(100% - 150px);
         margin: 10px 10px 0 10px;
-        padding: 10px;
+        padding: 20px;
 
         &:after {
             content: '';
@@ -203,7 +237,7 @@
             display: block;
             width: 0;
             z-index: 1;
-            right: -8px;
+            right: -6px;
             top: 16px;
         }
     }

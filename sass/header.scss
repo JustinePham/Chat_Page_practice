@@ -2,15 +2,16 @@
     background-color: white;
     height: 75;
     z-index: 999;
-    width:100%;
-    /* replace later with mixin */
-    border-bottom: 1.8px solid rgba(153,153,153,0.20);
+    width: calc(100% - 75px);
+    border-bottom: 2px solid rgba(153, 153, 153, 0.2);
+    z-index: 99;
+    position: fixed;
+    margin-left: 90px;
     
     .header-actions-bar { 
         font-weight: 300;
         color: lightgrey;
         margin-left: 20;
-
         .profile-img {
                 width: 70px;
                 padding: 0 10 0 10;
